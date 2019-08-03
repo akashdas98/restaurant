@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _pageload__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pageload */ \"./src/pageload.js\");\n\n\nObject(_pageload__WEBPACK_IMPORTED_MODULE_0__[\"pageload\"])();\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _pageload__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pageload */ \"./src/pageload.js\");\n\n\nObject(_pageload__WEBPACK_IMPORTED_MODULE_0__[\"pageload\"])();\n\nconst Tabs = (() => {\n  const tabs = document.querySelectorAll('nav a');\n  \n  function clickTab() {\n    tabs.forEach(tab => {\n      tab.addEventListener('click', () => {\n        reset();\n        newTab(tab);\n      });\n    });\n  }\n\n  function reset() {\n    Array.from(tabs).forEach(tab => {\n      tab.style.borderBottom = '0';\n    });\n  }\n\n  function newTab(tab) {\n    tab.style.borderBottom = '5px solid rgba(211, 110, 15, 0.95)';\n  }\n\n  return {clickTab};\n})();\n\nTabs.clickTab();\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
