@@ -1,1 +1,3 @@
-console.log("hEllO, wOrLd!");
+import {pageload} from './pageload';
+
+pageload();
