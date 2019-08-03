@@ -112,28 +112,29 @@ nav ul li {
   letter-spacing: 0.1em;
   font-weight: 600;
   text-transform: uppercase;
-  line-height: 1.1em;
+  margin: 0;
+  line-height: 1em;
+  padding-bottom: 3%;
   cursor: pointer;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 nav ul li:first-child {
-  font-size: 7em;
+  font-size: 6em;
   font-style: italic;
   font-family: 'Times New Roman', Times, serif;
   letter-spacing: 0.1em;
   font-weight: 400;
   text-transform: none;
-  line-height: 0.9em;
   margin-right: -1%;
   color: rgba(255, 255, 255, 1);
 }
 
-nav ul li a {
+nav a {
   transition: all 0.1s;
 }
 
-nav ul li a:hover {
+nav a:hover {
   padding-right: 8px;
 }
 
