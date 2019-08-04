@@ -1,4 +1,5 @@
 import {pageload} from './pageload';
+import {menuTab} from './menu';
 
 pageload();
 
@@ -21,7 +22,22 @@ const Tabs = (() => {
   }
 
   function newTab(tab) {
+    const tabClass = tab.className;
     tab.style.borderBottom = '5px solid rgba(211, 110, 15, 0.95)';
+    switch(tabClass) {
+      case 'menu':
+        menuTab();
+        break;
+      /*case 'reservations':
+        reservationsTab();
+        break;
+      case 'about':
+        aboutTab();
+        break;
+      case 'contact':
+        contactTab();
+        break;*/
+    }
   }
 
   return {clickTab};

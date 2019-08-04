@@ -10,16 +10,16 @@ function pageload() {
   const description = elementCreator('div', 'description');
   const nav = elementCreator('nav');
 
-  logo.innerHTML = `JOHN<span>'s</span>`;
+  logo.innerHTML = `<a href="./index.html">JOHN<span>'s</span></a>`;
   
   description.innerHTML = `<h2>Chef:</h2>
     <p>We've prepared the flakiest puff pastries for you. Start your day with a puff!</p>`;
     
   nav.innerHTML = `<ul>
-      <li><a href="#">Menu</a></li>
-      <li><a href="#">Reservations</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#" class="menu">Menu</a></li>
+      <li><a href="#" class="reservations">Reservations</a></li>
+      <li><a href="#" class="about">About</a></li>
+      <li><a href="#" class="contacr">Contact</a></li>
     </ul>`;
   
   header.appendChild(logo);

@@ -8,4 +8,15 @@ function elementCreator() {
   return element;
 }
 
-export {elementCreator};
+function tabCreator() {
+  const main = document.querySelector('.main');
+  const tabContainer = elementCreator('div', 'tab-container');
+
+  tabContainer.classList.add('tab-container');
+  main.removeChild(main.childNodes[1]);
+  main.appendChild(tabContainer);
+  
+  return tabContainer;
+}
+
+export {elementCreator, tabCreator};
