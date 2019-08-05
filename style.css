@@ -33,11 +33,12 @@ body, html {
 }
 
 .main {
-  width: 68%;
+  width: 80.5%;
 }
 
 header {
-  padding: 7% 0 0 15%;
+  width: 100%;
+  padding: 4% 0 0 5%;
   display: flex;
   justify-content: flex-end;
   align-items: baseline;
@@ -88,21 +89,93 @@ header {
 }
 
 .tab-container {
+  padding: 2% 4%;
+  position: absolute;
+  bottom: 0;
+  width: 80.5%;
+  height: 76%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.menu-tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+
+.menu-header span {
+  cursor: pointer;
+}
+
+.menu-header span:hover {
+  color: rgba(211, 110, 15, 0.7);
+}
+
+.menu-header span.mid {
+  cursor: initial;
+  margin: 0 40px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1.2em;
+}
+
+.menu-header span.mid:hover {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.menu-body {
   display: flex;
   justify-content: center;
-  padding: 8%;
-  width: 90%;
-  height: 70%;
-  margin: 3% auto;
+  align-items: center;
+  width: 70%;
+  height: 80%;
+}
+
+.menu-table {
+  width: 95%;
+  height: 95%;
+  border-collapse: collapse;
+}
+
+.menu-table tr {
+  border-bottom: 1px solid rgb(85, 85, 85);
+  padding: 2%;
+}
+
+.menu-table tr:last-child {
+  border: 0;
+}
+
+.menu-table tr td:first-child {
+  width: 70%;
+  text-align: left;
+  border-right: 1px solid rgb(85, 85, 85);
+}
+
+.menu-table tr td:last-child {
+  text-align: right;
 }
 
 nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 32%;
+  width: 19.5%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 1);
+  font-size: 0.85vw;
 }
 
 nav ul {
@@ -114,25 +187,22 @@ nav ul {
 }
 
 nav ul li {
-  font-size: 3.8em;
+  font-size: 2.3em;
   letter-spacing: 0.1em;
   font-weight: 600;
   text-transform: uppercase;
-  margin: 0;
+  margin-bottom: 3%;
   line-height: 1em;
-  padding-bottom: 3%;
   color: rgba(255, 255, 255, 0.6);
 }
 
 nav ul li:first-child {
-  font-size: 6em;
+  font-size: 3.8em;
   font-style: italic;
   font-family: 'Times New Roman', Times, serif;
   letter-spacing: 0.1em;
   font-weight: 400;
   text-transform: none;
-  margin-right: -1%;
-  color: rgba(255, 255, 255, 1);
 }
 
 nav a {
