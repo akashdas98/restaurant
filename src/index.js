@@ -3,27 +3,37 @@ import {menuTab} from './menu';
 
 pageload();
 
-const Tabs = (() => {
+(function tabs() {
   const tabs = document.querySelectorAll('nav a');
   
-  function clickTab() {
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      reset();
+      newTab(tab);
+    });
+  }); 
+
+  function reset() {
+    const main = document.querySelector('.main');
+    
+    if(main.childNodes[1]) {
+      main.removeChild(main.childNodes[1]);
+    }
+    
     tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        reset();
-        newTab(tab);
-      });
+      tab.style.borderBottom = '0';
+      tab.style.color = '';  
     });
   }
 
-  function reset() {
-    Array.from(tabs).forEach(tab => {
-      tab.style.borderBottom = '0';
-    });
+  function selectTab(tab) {
+    tab.style.borderBottom = '3px solid rgba(211, 110, 15, 0.95)';
+    tab.style.color = 'white';
   }
 
   function newTab(tab) {
     const tabClass = tab.className;
-    tab.style.borderBottom = '5px solid rgba(211, 110, 15, 0.95)';
+    selectTab(tab);
     switch(tabClass) {
       case 'menu':
         menuTab();
@@ -39,8 +49,4 @@ const Tabs = (() => {
         break;*/
     }
   }
-
-  return {clickTab};
 })();
-
-Tabs.clickTab();
