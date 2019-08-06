@@ -141,6 +141,7 @@ header {
   display: flex;
   margin: 2%;
   width: 70%;
+  min-width: 700px;
   height: 90%;
   overflow: auto; 
   scrollbar-width: thin;
