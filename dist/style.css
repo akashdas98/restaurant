@@ -63,14 +63,14 @@ header {
   letter-spacing: 0;
 }
 
-.description {
+.chef {
   width: 500px;
   max-height: 500px;
   margin: 12% auto;
   padding: 20px;
 }
 
-.description h2 {
+.chef h2 {
   font-style: italic;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 400;
@@ -78,7 +78,7 @@ header {
   text-align: left;
 }
 
-.description p {
+.chef p {
   margin-top: 30px;
   font-size: 1.4em;
   letter-spacing: 0.2em;
@@ -94,7 +94,7 @@ header {
   bottom: 0;
   width: 80.5%;
   height: 76%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .menu-tab {
@@ -112,8 +112,9 @@ header {
   color: rgba(255, 255, 255, 0.7);
   font-size: 1.5em;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 800;
   letter-spacing: 0.1em;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .menu-header span {
@@ -140,32 +141,56 @@ header {
   justify-content: center;
   align-items: center;
   width: 70%;
-  height: 80%;
+  height: 90%;
 }
 
 .menu-table {
   width: 95%;
-  height: 95%;
+  height: 98%;
   border-collapse: collapse;
+  font-weight: 800;
 }
 
 .menu-table tr {
   border-bottom: 1px solid rgb(85, 85, 85);
-  padding: 2%;
 }
 
 .menu-table tr:last-child {
   border: 0;
 }
 
+.menu-table tr td {
+  padding: 0 2%;
+}
+
 .menu-table tr td:first-child {
   width: 70%;
-  text-align: left;
-  border-right: 1px solid rgb(85, 85, 85);
+  text-align: start;
 }
 
 .menu-table tr td:last-child {
-  text-align: right;
+  text-align: end;
+}
+
+.menu-table tr td .dish {
+  color: rgba(211, 110, 15, 0.9);
+  font-size: 1.3em;
+  text-transform: uppercase;
+}
+
+.menu-table tr td .dish-description {
+  color: rgb(144, 144, 144);
+  margin-top: 0.5%;
+  font-size: 1em;
+  font-style: italic;
+  line-height: 1.2em;
+}
+
+.menu-table tr td .price {
+  color: rgba(255, 255, 255, 0.9);
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5em;
 }
 
 nav {

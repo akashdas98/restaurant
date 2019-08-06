@@ -7,13 +7,13 @@ function pageload() {
   const main = elementCreator('div', 'main');
   const header = elementCreator('header');
   const logo = elementCreator('div', 'logo');
-  const description = elementCreator('div', 'description');
+  const chef = elementCreator('div', 'chef');
   const nav = elementCreator('nav');
 
   logo.innerHTML = `<a href="./index.html">JOHN<span>'s</span></a>`;
   
-  description.innerHTML = `<h2>Chef:</h2>
-    <p>We've prepared the flakiest puff pastries for you. Start your day with a puff!</p>`;
+  chef.innerHTML = `<h2>Chef:</h2>
+    <p>We have prepared the fluffiest waffles for you. Start your day with a bite of this crispy goodness!</p>`;
     
   nav.innerHTML = `<ul>
       <li><a href="#" class="menu">Menu</a></li>
@@ -24,7 +24,7 @@ function pageload() {
   
   header.appendChild(logo);
   main.appendChild(header);
-  main.appendChild(description);
+  main.appendChild(chef);
   layer.appendChild(main);
   layer.appendChild(nav);
   bg.appendChild(layer);

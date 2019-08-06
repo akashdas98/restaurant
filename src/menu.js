@@ -50,46 +50,58 @@ function menuLoad(menuOption) {
 }
 
 function loadBreakfast() {
-  const table = elementCreator('table');
-  const rows = [];
-  const cells = [];
   const menuBody = addMenuBody();
-  
-  table.classList.add('menu-table');
+  const table = menuTableCreator(6);
+  const tableProperties = getTableProperties(table);
 
-  for(let i = 0; i < 6; i++) {
-    cells[i] = new Array(2);
-  }
-  
-  for(let i = 0; i < 6; i++) {
-    rows[i] = table.insertRow(i);
-    for(let j = 0; j < 2; j++) {
-      cells[i].push(rows[i].insertCell(j));
-    }
-  }
-  
+  tableProperties.dishes[0].textContent = 'Pancakes with Maple Syrup';
+  tableProperties.descriptions[0].textContent = 'Light, fluffy and delicious pancakes drizzled with rich maple syrup.';
+  tableProperties.prices[0].textContent = '$20';
+
+  tableProperties.dishes[1].textContent = 'Belgian Style Waffles';
+  tableProperties.descriptions[1].textContent = 'Crispy on the outside but light and spungy on the inside, with deep pockets filled with your favorite syrups - chocolate, caramel, maple or blueberry!!';
+  tableProperties.prices[1].textContent = '$20';
+
+  tableProperties.dishes[2].textContent = 'Pancakes with Maple Syrup';
+  tableProperties.descriptions[2].textContent = 'Light, fluffy and delicious pancakes drizzled with rich maple syrup.';
+  tableProperties.prices[2].textContent = '$20';
+
+  tableProperties.dishes[3].textContent = 'Belgian Style Waffles';
+  tableProperties.descriptions[3].textContent = 'Crispy on the outside but light and spungy on the inside, with deep pockets filled with your favorite syrups - chocolate, caramel, maple or blueberry!!';
+  tableProperties.prices[3].textContent = '$20';
+
+  tableProperties.dishes[4].textContent = 'Pancakes with Maple Syrup';
+  tableProperties.descriptions[4].textContent = 'Light, fluffy and delicious pancakes drizzled with rich maple syrup.';
+  tableProperties.prices[4].textContent = '$20';
+
+  tableProperties.dishes[5].textContent = 'Belgian Style Waffles';
+  tableProperties.descriptions[5].textContent = 'Crispy on the outside but light and spungy on the inside, with deep pockets filled with your favorite syrups - chocolate, caramel, maple or blueberry!!';
+  tableProperties.prices[5].textContent = '$20';
+
   menuBody.appendChild(table);
 }
 
 function loadCoffee() {
-  const table = elementCreator('table');
-  const rows = [];
-  const cells = [];
   const menuBody = addMenuBody();
-  
-  table.classList.add('menu-table');
+  const table = menuTableCreator(4);
+  const tableProperties = getTableProperties(table);
 
-  for(let i = 0; i < 4; i++) {
-    cells[i] = new Array(2);
-  }
-  
-  for(let i = 0; i < 4; i++) {
-    rows[i] = table.insertRow(i);
-    for(let j = 0; j < 2; j++) {
-      cells[i].push(rows[i].insertCell(j));
-    }
-  }
-  
+  tableProperties.dishes[0].textContent = 'Caffè Americano';
+  tableProperties.descriptions[0].textContent = 'Made from the finest Arabica beans espresso. As simple and flavorful as an Americano gets.';
+  tableProperties.prices[0].textContent = '$10';
+
+  tableProperties.dishes[1].textContent = 'Cinnamon Cappuccino - Hot / Iced';
+  tableProperties.descriptions[1].textContent = 'Foamy, creamy and filled with the flavors of Arabica beans.';
+  tableProperties.prices[1].textContent = '$10';
+
+  tableProperties.dishes[2].textContent = 'Caffè Americano';
+  tableProperties.descriptions[2].textContent = 'Made from the finest Arabica beans espresso. As simple and flavorful as an Americano gets.';
+  tableProperties.prices[2].textContent = '$10';
+
+  tableProperties.dishes[3].textContent = 'Cinnamon Cappuccino - Hot / Iced';
+  tableProperties.descriptions[3].textContent = 'Foamy, creamy and filled with the flavors of Arabica beans.';
+  tableProperties.prices[3].textContent = '$10';
+
   menuBody.appendChild(table);
 }
 
@@ -99,6 +111,65 @@ function addMenuBody() {
 
   menuTab.appendChild(menuBody);
   return menuBody;
+}
+
+function menuTableCreator(size) {
+  const table = elementCreator('table', 'menu-table');
+  
+  for(let i = 0; i < size; i++) {
+    table.insertRow(i);
+  }
+
+  Array.from(table.rows).forEach(row => {
+    row.insertCell(-1);
+    row.insertCell(-1);
+  });
+
+  Array.from(table.rows).forEach(row => {
+    row.cells[0].appendChild(elementCreator('div', 'dish'));
+    row.cells[0].appendChild(elementCreator('div', 'dish-description'));
+    row.cells[1].appendChild(elementCreator('div', 'price'));
+  });
+
+  return table;
+}
+
+function getTableProperties(table) {
+  const dishes = getDishes(table);
+  const descriptions = getDescriptions(table);
+  const prices = getPrices(table);
+
+  function getDishes(table) {
+    const dishes = [];
+    
+    Array.from(table.rows).forEach(row => {
+      dishes.push(row.cells[0].childNodes[0]);
+    });
+  
+    return dishes;
+  }
+  
+  function getDescriptions(table) {
+    const descriptions = [];
+    
+    Array.from(table.rows).forEach(row => {
+      descriptions.push(row.cells[0].childNodes[1]);
+    });
+  
+    return descriptions;
+  }
+  
+  function getPrices(table) {
+    const prices = [];
+    
+    Array.from(table.rows).forEach(row => {
+      prices.push(row.cells[1].childNodes[0]);
+    });
+  
+    return prices;
+  }
+
+  return {dishes, descriptions, prices};
 }
 
 export {menuTab};
