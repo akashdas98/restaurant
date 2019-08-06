@@ -90,7 +90,7 @@ header {
 
 .tab-container {
   padding: 2% 4%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   height: 76%;
   background: rgba(0, 0, 0, 0.7);
