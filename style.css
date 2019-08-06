@@ -152,6 +152,7 @@ header {
   border-collapse: collapse;
   margin: auto;
   font-weight: 800;
+  font-size: 1.7vh;
 }
 ::-webkit-scrollbar {
   width: 0.5%;
@@ -170,7 +171,7 @@ header {
 }
 
 .menu-table tr td {
-  padding: 2%;
+  padding: 1% 2%;
 }
 
 .menu-table tr td:first-child {
