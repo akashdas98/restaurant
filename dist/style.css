@@ -14,6 +14,7 @@ body, html {
   font-family: Arial, Helvetica, sans-serif;
   width: 100%;
   height: 100%;
+  position: fixed;
 }
 
 .bg {
@@ -32,7 +33,7 @@ body, html {
   height: 100%;
 }
 
-.main {
+.main, .tab-container {
   width: 80.5%;
 }
 
@@ -66,8 +67,9 @@ header {
 .chef {
   width: 500px;
   max-height: 500px;
-  margin: 12% auto;
-  padding: 20px;
+  margin: 12vh auto 0 auto;
+  padding: 1.5%;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .chef h2 {
@@ -92,7 +94,6 @@ header {
   padding: 2% 4%;
   position: absolute;
   bottom: 0;
-  width: 80.5%;
   height: 76%;
   background: rgba(0, 0, 0, 0.7);
 }
@@ -138,18 +139,27 @@ header {
 
 .menu-body {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 2%;
   width: 70%;
   height: 90%;
+  overflow: auto; 
+  scrollbar-width: thin;
 }
 
 .menu-table {
   width: 95%;
   height: 98%;
   border-collapse: collapse;
+  margin: auto;
   font-weight: 800;
 }
+::-webkit-scrollbar {
+  width: 0.5%;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+}
+
 
 .menu-table tr {
   border-bottom: 1px solid rgb(85, 85, 85);
@@ -160,7 +170,7 @@ header {
 }
 
 .menu-table tr td {
-  padding: 0 2%;
+  padding: 2%;
 }
 
 .menu-table tr td:first-child {
