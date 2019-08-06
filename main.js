@@ -86,6 +86,30 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/about.js":
+/*!**********************!*\
+  !*** ./src/about.js ***!
+  \**********************/
+/*! exports provided: aboutTab */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"aboutTab\", function() { return aboutTab; });\n/* harmony import */ var _elementfunctions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./elementfunctions */ \"./src/elementfunctions.js\");\n\n\nfunction aboutTab() {\n  const tabContainer = Object(_elementfunctions__WEBPACK_IMPORTED_MODULE_0__[\"tabCreator\"])();\n}\n\n\n\n//# sourceURL=webpack:///./src/about.js?");
+
+/***/ }),
+
+/***/ "./src/contact.js":
+/*!************************!*\
+  !*** ./src/contact.js ***!
+  \************************/
+/*! exports provided: contactTab */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"contactTab\", function() { return contactTab; });\n/* harmony import */ var _elementfunctions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./elementfunctions */ \"./src/elementfunctions.js\");\n\n\nfunction contactTab() {\n  const tabContainer = Object(_elementfunctions__WEBPACK_IMPORTED_MODULE_0__[\"tabCreator\"])();\n}\n\n\n\n//# sourceURL=webpack:///./src/contact.js?");
+
+/***/ }),
+
 /***/ "./src/elementfunctions.js":
 /*!*********************************!*\
   !*** ./src/elementfunctions.js ***!
@@ -94,7 +118,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"elementCreator\", function() { return elementCreator; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"tabCreator\", function() { return tabCreator; });\nfunction elementCreator() {\n  const element = document.createElement(arguments[0]);\n  \n  for(let i = 1; i < arguments.length; i++) {\n    element.classList.add(arguments[i]);\n  }\n\n  return element;\n}\n\nfunction tabCreator() {\n  const main = document.querySelector('.main');\n  const tabContainer = elementCreator('div', 'tab-container');\n\n  tabContainer.classList.add('tab-container');\n  main.appendChild(tabContainer);\n  \n  return tabContainer;\n}\n\n\n\n//# sourceURL=webpack:///./src/elementfunctions.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"elementCreator\", function() { return elementCreator; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"tabCreator\", function() { return tabCreator; });\nfunction elementCreator() {\n  const element = document.createElement(arguments[0]);\n  \n  for(let i = 1; i < arguments.length; i++) {\n    element.classList.add(arguments[i]);\n  }\n\n  return element;\n}\n\nfunction tabCreator() {\n  const main = document.querySelector('.main');\n  const tabContainer = elementCreator('div', 'tab-container');\n\n  main.appendChild(tabContainer);\n  \n  return tabContainer;\n}\n\n\n\n//# sourceURL=webpack:///./src/elementfunctions.js?");
 
 /***/ }),
 
@@ -106,7 +130,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _pageload__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pageload */ \"./src/pageload.js\");\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu */ \"./src/menu.js\");\n\n\n\nObject(_pageload__WEBPACK_IMPORTED_MODULE_0__[\"pageload\"])();\n\n(function tabs() {\n  const tabs = document.querySelectorAll('nav a');\n  \n  tabs.forEach(tab => {\n    tab.addEventListener('click', () => {\n      reset();\n      newTab(tab);\n    });\n  }); \n\n  function reset() {\n    const main = document.querySelector('.main');\n    \n    if(main.childNodes[1]) {\n      main.removeChild(main.childNodes[1]);\n    }\n    \n    tabs.forEach(tab => {\n      tab.style.borderBottom = '0';\n      tab.style.color = '';  \n    });\n  }\n\n  function selectTab(tab) {\n    tab.style.borderBottom = '3px solid rgba(211, 110, 15, 0.95)';\n    tab.style.color = 'white';\n  }\n\n  function newTab(tab) {\n    const tabClass = tab.className;\n    selectTab(tab);\n    switch(tabClass) {\n      case 'menu':\n        Object(_menu__WEBPACK_IMPORTED_MODULE_1__[\"menuTab\"])();\n        break;\n      /*case 'reservations':\n        reservationsTab();\n        break;\n      case 'about':\n        aboutTab();\n        break;\n      case 'contact':\n        contactTab();\n        break;*/\n    }\n  }\n})();\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _pageload__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pageload */ \"./src/pageload.js\");\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu */ \"./src/menu.js\");\n/* harmony import */ var _reservations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./reservations */ \"./src/reservations.js\");\n/* harmony import */ var _about__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./about */ \"./src/about.js\");\n/* harmony import */ var _contact__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./contact */ \"./src/contact.js\");\n\n\n\n\n\n\nObject(_pageload__WEBPACK_IMPORTED_MODULE_0__[\"pageload\"])();\n\n(function tabs() {\n  const tabs = document.querySelectorAll('nav a');\n  \n  tabs.forEach(tab => {\n    tab.addEventListener('click', () => {\n      reset();\n      newTab(tab);\n    });\n  }); \n\n  function reset() {\n    const main = document.querySelector('.main');\n    \n    if(main.childNodes[1]) {\n      main.removeChild(main.childNodes[1]);\n    }\n    \n    tabs.forEach(tab => {\n      tab.style.borderBottom = '0';\n      tab.style.color = '';  \n    });\n  }\n\n  function selectTab(tab) {\n    tab.style.borderBottom = '3px solid rgba(211, 110, 15, 0.95)';\n    tab.style.color = 'white';\n  }\n\n  function newTab(tab) {\n    const tabClass = tab.className;\n    selectTab(tab);\n    switch(tabClass) {\n      case 'menu':\n        Object(_menu__WEBPACK_IMPORTED_MODULE_1__[\"menuTab\"])();\n        break;\n      case 'reservations':\n        Object(_reservations__WEBPACK_IMPORTED_MODULE_2__[\"reservationsTab\"])();\n        break;\n      case 'about':\n        Object(_about__WEBPACK_IMPORTED_MODULE_3__[\"aboutTab\"])();\n        break;\n      case 'contact':\n        Object(_contact__WEBPACK_IMPORTED_MODULE_4__[\"contactTab\"])();\n        break;\n    }\n  }\n})();\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
@@ -130,7 +154,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"pageload\", function() { return pageload; });\n/* harmony import */ var _elementfunctions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./elementfunctions */ \"./src/elementfunctions.js\");\n\n\nfunction pageload() {\n  const content = document.querySelector('#content');  \n  const bg = Object(_elementfunctions__WEBPACK_IMPORTED_MODULE_0__[\"elementCreator\"])('div', 'bg');\n  const layer = Object(_elementfunctions__WEBPACK_IMPORTED_MODULE_0__[\"elementCreator\"])('div', 'layer');\n  const main = Object(_elementfunctions__WEBPACK_IMPORTED_MODULE_0__[\"elementCreator\"])('div', 'main');\n  const header = Object(_elementfunctions__WEBPACK_IMPORTED_MODULE_0__[\"elementCreator\"])('header');\n  const logo = Object(_elementfunctions__WEBPACK_IMPORTED_MODULE_0__[\"elementCreator\"])('div', 'logo');\n  const chef = Object(_elementfunctions__WEBPACK_IMPORTED_MODULE_0__[\"elementCreator\"])('div', 'chef');\n  const nav = Object(_elementfunctions__WEBPACK_IMPORTED_MODULE_0__[\"elementCreator\"])('nav');\n\n  logo.innerHTML = `<a href=\"./index.html\">JOHN<span>'s</span></a>`;\n  \n  chef.innerHTML = `<h2>Chef:</h2>\n    <p>We have prepared the fluffiest waffles for you. Start your day with a bite of this crispy goodness!</p>`;\n    \n  nav.innerHTML = `<ul>\n      <li><a href=\"#\" class=\"menu\">Menu</a></li>\n      <li><a href=\"#\" class=\"reservations\">Reservations</a></li>\n      <li><a href=\"#\" class=\"about\">About</a></li>\n      <li><a href=\"#\" class=\"contacr\">Contact</a></li>\n    </ul>`;\n  \n  header.appendChild(logo);\n  main.appendChild(header);\n  main.appendChild(chef);\n  layer.appendChild(main);\n  layer.appendChild(nav);\n  bg.appendChild(layer);\n  content.appendChild(bg);\n}\n\n\n\n//# sourceURL=webpack:///./src/pageload.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"pageload\", function() { return pageload; });\n/* harmony import */ var _elementfunctions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./elementfunctions */ \"./src/elementfunctions.js\");\n\n\nfunction pageload() {\n  const content = document.querySelector('#content');  \n  const bg = Object(_elementfunctions__WEBPACK_IMPORTED_MODULE_0__[\"elementCreator\"])('div', 'bg');\n  const layer = Object(_elementfunctions__WEBPACK_IMPORTED_MODULE_0__[\"elementCreator\"])('div', 'layer');\n  const main = Object(_elementfunctions__WEBPACK_IMPORTED_MODULE_0__[\"elementCreator\"])('div', 'main');\n  const header = Object(_elementfunctions__WEBPACK_IMPORTED_MODULE_0__[\"elementCreator\"])('header');\n  const logo = Object(_elementfunctions__WEBPACK_IMPORTED_MODULE_0__[\"elementCreator\"])('div', 'logo');\n  const chef = Object(_elementfunctions__WEBPACK_IMPORTED_MODULE_0__[\"elementCreator\"])('div', 'chef');\n  const nav = Object(_elementfunctions__WEBPACK_IMPORTED_MODULE_0__[\"elementCreator\"])('nav');\n\n  logo.innerHTML = `<a href=\"./index.html\">JOHN<span>'s</span></a>`;\n  \n  chef.innerHTML = `<h2>Chef:</h2>\n    <p>We have prepared the fluffiest waffles for you. Start your day with a bite of this crispy goodness!</p>`;\n    \n  nav.innerHTML = `<ul>\n      <li><a href=\"#\" class=\"menu\">Menu</a></li>\n      <li><a href=\"#\" class=\"reservations\">Reservations</a></li>\n      <li><a href=\"#\" class=\"about\">About</a></li>\n      <li><a href=\"#\" class=\"contact\">Contact</a></li>\n    </ul>`;\n  \n  header.appendChild(logo);\n  main.appendChild(header);\n  main.appendChild(chef);\n  layer.appendChild(main);\n  layer.appendChild(nav);\n  bg.appendChild(layer);\n  content.appendChild(bg);\n}\n\n\n\n//# sourceURL=webpack:///./src/pageload.js?");
+
+/***/ }),
+
+/***/ "./src/reservations.js":
+/*!*****************************!*\
+  !*** ./src/reservations.js ***!
+  \*****************************/
+/*! exports provided: reservationsTab */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"reservationsTab\", function() { return reservationsTab; });\n/* harmony import */ var _elementfunctions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./elementfunctions */ \"./src/elementfunctions.js\");\n\n\nfunction reservationsTab() {\n  const tabContainer = Object(_elementfunctions__WEBPACK_IMPORTED_MODULE_0__[\"tabCreator\"])();\n}\n\n\n\n//# sourceURL=webpack:///./src/reservations.js?");
 
 /***/ })
 
