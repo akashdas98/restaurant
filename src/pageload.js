@@ -19,7 +19,7 @@ function pageload() {
       <li><a href="#" class="menu">Menu</a></li>
       <li><a href="#" class="reservations">Reservations</a></li>
       <li><a href="#" class="about">About</a></li>
-      <li><a href="#" class="contacr">Contact</a></li>
+      <li><a href="#" class="contact">Contact</a></li>
     </ul>`;
   
   header.appendChild(logo);

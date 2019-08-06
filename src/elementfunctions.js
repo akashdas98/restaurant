@@ -12,7 +12,6 @@ function tabCreator() {
   const main = document.querySelector('.main');
   const tabContainer = elementCreator('div', 'tab-container');
 
-  tabContainer.classList.add('tab-container');
   main.appendChild(tabContainer);
   
   return tabContainer;

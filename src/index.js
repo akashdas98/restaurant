@@ -1,5 +1,8 @@
 import {pageload} from './pageload';
 import {menuTab} from './menu';
+import {reservationsTab} from './reservations';
+import {aboutTab} from './about';
+import {contactTab} from './contact';
 
 pageload();
 
@@ -38,7 +41,7 @@ pageload();
       case 'menu':
         menuTab();
         break;
-      /*case 'reservations':
+      case 'reservations':
         reservationsTab();
         break;
       case 'about':
@@ -46,7 +49,7 @@ pageload();
         break;
       case 'contact':
         contactTab();
-        break;*/
+        break;
     }
   }
 })();
