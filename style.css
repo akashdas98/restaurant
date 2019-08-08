@@ -94,7 +94,6 @@ header {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  font-size: 1.67vh;
 }
 
 .menu-header {
@@ -103,7 +102,6 @@ header {
   align-items: center;
   justify-content: center;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 1.5em;
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 0.1em;
@@ -111,6 +109,7 @@ header {
 }
 
 .menu-header span {
+  font-size: 1.5em;
   cursor: pointer;
 }
 
@@ -177,7 +176,7 @@ header {
 
 .menu-table tr td .dish {
   color: rgba(211, 110, 15, 0.9);
-  font-size: 1.3em;
+  font-size: 1.4em;
   text-transform: uppercase;
 }
 
