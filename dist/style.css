@@ -97,11 +97,8 @@ header {
 }
 
 .menu-header {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: rgba(255, 255, 255, 0.7);
+  font-size: 1.5em;
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 0.1em;
@@ -109,7 +106,6 @@ header {
 }
 
 .menu-header span {
-  font-size: 1.5em;
   cursor: pointer;
 }
 
@@ -142,7 +138,7 @@ header {
   width: 95%;
   height: 98%;
   border-collapse: collapse;
-  margin: auto;
+  margin: 0 auto;
   font-weight: 800;
 }
 ::-webkit-scrollbar {
@@ -202,25 +198,27 @@ header {
   overflow: auto;
 }
 
-.about-tab > div {
+.cafe, .atmosphere, .story {
   padding: 20px;
   width: 70%;
-  min-width: 600px;
-  vertical-align: top;
-  margin: auto;
+  min-width: 700px;
+  margin: 0 auto 20px auto;
 }
 
 .about-header {
+  width: 100%;
   color: rgba(211, 110, 15, 0.9);
   text-transform: uppercase;
   font-weight: 800;
-  line-height: 1.2em;
+  font-size: 1.5em;
   letter-spacing: 0.1em;
   font-family: 'Times New Roman', Times, serif;
   margin-bottom: 20px;
 }
 
 .about-body {
+  width: 100%;
+  height: 100%;
   font-size: 1.4em;
   letter-spacing: 0.2em;
   line-height: 1.2em;

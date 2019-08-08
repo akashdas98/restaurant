@@ -2,7 +2,7 @@ import {elementCreator, tabCreator} from './elementfunctions';
 
 function menuTab() {
   const tabContainer = tabCreator();
-  const menuHeader = elementCreator('h2', 'menu-header');
+  const menuHeader = elementCreator('div', 'menu-header');
 
   tabContainer.classList.add('menu-tab');
   menuHeader.innerHTML = '<span class="coffee">Coffee</span><span class="mid">|</span><span class="breakfast">Breakfast</span>';
@@ -54,7 +54,7 @@ function loadBreakfast() {
   const table = menuTableCreator(6);
   const tableProperties = getTableProperties(table);
 
-  tableProperties.dishes[0].textContent = 'Pancakes with Maple Syrup';
+  tableProperties.dishes[0].innerHTML = 'Pancakes with Maple Syrup';
   tableProperties.descriptions[0].textContent = 'Light, fluffy and delicious pancakes drizzled with rich maple syrup.';
   tableProperties.prices[0].textContent = '$20';
 
