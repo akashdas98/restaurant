@@ -2,7 +2,7 @@ import {elementCreator, tabCreator} from './elementfunctions';
 
 function menuTab() {
   const tabContainer = tabCreator();
-  const menuHeader = elementCreator('div', 'menu-header');
+  const menuHeader = elementCreator('h2', 'menu-header');
 
   tabContainer.classList.add('menu-tab');
   menuHeader.innerHTML = '<span class="coffee">Coffee</span><span class="mid">|</span><span class="breakfast">Breakfast</span>';
