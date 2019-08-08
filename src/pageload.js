@@ -2,7 +2,6 @@ import {elementCreator} from './elementfunctions'
 
 function pageload() {
   const content = document.querySelector('#content');  
-  const bg = elementCreator('div', 'bg');
   const layer = elementCreator('div', 'layer');
   const main = elementCreator('div', 'main');
   const header = elementCreator('header');
@@ -27,8 +26,7 @@ function pageload() {
   main.appendChild(chef);
   layer.appendChild(main);
   layer.appendChild(nav);
-  bg.appendChild(layer);
-  content.appendChild(bg);
+  content.appendChild(layer);
 }
 
 export {pageload};
