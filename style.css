@@ -94,6 +94,7 @@ header {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  font-size: 1.67vh;
 }
 
 .menu-header {
@@ -144,7 +145,6 @@ header {
   border-collapse: collapse;
   margin: auto;
   font-weight: 800;
-  font-size: 1.7vh;
 }
 ::-webkit-scrollbar {
   width: 0.5%;
@@ -198,18 +198,17 @@ header {
 
 .about-tab {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   overflow: auto;
 }
 
 .about-tab > div {
-  padding: 2vh;
+  padding: 20px;
   width: 70%;
   min-width: 600px;
   vertical-align: top;
-  margin-bottom: 1vh;
-  line-height: 1vh;
+  margin: auto;
 }
 
 .about-header {
@@ -219,7 +218,7 @@ header {
   line-height: 1.2em;
   letter-spacing: 0.1em;
   font-family: 'Times New Roman', Times, serif;
-  margin-bottom: 2vh;
+  margin-bottom: 20px;
 }
 
 .about-body {
