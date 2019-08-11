@@ -225,6 +225,69 @@ header {
   color: rgb(179, 179, 179);
 }
 
+.contact-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-div, .phone-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1%;
+  margin: 2% 0;
+}
+
+.social-div a {
+  margin: 0 2%;
+}
+
+.social-div div {
+  font-size: 2em;
+  font-weight: 800;
+  text-align: center;
+  width: 100%;
+  color: rgba(211, 110, 15, 0.9);
+  margin-bottom: 3%;
+  text-transform: uppercase;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.social-div img {
+  width: 75px;
+  height: 75px;
+  opacity: 0.8;
+  transition: all 0.1s;
+}
+
+.social-div img:hover {
+  opacity: 1;
+}
+
+.phone-div .phones, .phone-div .numbers {
+  font-size: 2em;
+  font-weight: 800;
+  text-align: center;
+  width: 100%;
+  color: rgba(211, 110, 15, 0.9);
+}
+
+.phone-div .phones {
+  margin-bottom: 3%;
+  text-transform: uppercase;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.phone-div .numbers {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.phone-div .numbers span {
+  margin: 0 2%;
+}
+
 nav {
   display: flex;
   justify-content: flex-end;

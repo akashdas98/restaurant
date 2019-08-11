@@ -16,7 +16,7 @@ function pageload() {
     
   nav.innerHTML = `<ul>
       <li><a href="#" class="menu">Menu</a></li>
-      <li><a href="#" class="reservations">Reservations</a></li>
+      <!-- <li><a href="#" class="reservations">Reservations</a></li> -->
       <li><a href="#" class="about">About</a></li>
       <li><a href="#" class="contact">Contact</a></li>
     </ul>`;

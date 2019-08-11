@@ -41,9 +41,9 @@ pageload();
       case 'menu':
         menuTab();
         break;
-      case 'reservations':
+      /*case 'reservations':
         reservationsTab();
-        break;
+        break;*/
       case 'about':
         aboutTab();
         break;
